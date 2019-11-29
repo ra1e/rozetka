@@ -8,7 +8,10 @@ namespace TestTest.Pages
         [FindsBy(How = How.CssSelector, Using = "input[title='Поиск']")]
         public IWebElement Input { get; set; }
 
+
         [FindsBy(How = How.CssSelector, Using = "input[value='Поиск в Google']")]
         public IWebElement BtnSearch { get; set; }
+
+
     }
 }
