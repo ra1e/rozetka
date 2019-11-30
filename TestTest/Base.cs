@@ -13,21 +13,22 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace TestTest
 {
-   public class Base
+    public class Base
     {
-        IWebDriver driver;
+        public static IWebDriver driver;
+
+         public static IWebDriver getDriver()
+            {
+                return driver;
+            }
 
         [SetUp]
         public void startBrowser()
         {
             driver = new ChromeDriver("D:\\");
-            driver.Url = "https://www.google.com";
         }
 
-
-
-
-        [TearDown]
+[TearDown]
         public void CloseBrowser()
         {
             driver.Close();

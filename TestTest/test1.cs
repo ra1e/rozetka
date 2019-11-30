@@ -8,6 +8,8 @@ namespace TestTest
         [Test]
         public void Test1()
         {
+            driver.Url = "https://www.google.com";
+
             SinglePages.getPageHome().Input.Click();
             SinglePages.getPageHome().Input.SendKeys("Волк это ходить");
             SinglePages.getPageHome().BtnSearch.Click();

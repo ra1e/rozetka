@@ -6,7 +6,6 @@ namespace TestTest.Pages
 {
     class BackToHome
     {
-        [FindsBy(How = How.CssSelector, Using = "a#logo")]
-        public IWebElement BackHome { get; set; }
+        public IWebElement BackHome = Base.getDriver().FindElement(By.Id("logo"));
     }
 }
